@@ -10,20 +10,23 @@ function getWonders($db): array {
 }
 
 function formatWonders(array $allWonders): string {
-    $str =  '';
+    $str =  '<div class="ihatethiscontainer">';
 //    echo '<pre>';
 //    var_dump($allWonders);
 //    echo '</pre>';
 
     foreach ($allWonders as $wonder) {
-        $str .= '<p class>' . $wonder["name"] . '</p>';
-        $str .= '<p>' . $wonder["location"] . '</p>';
-        $str .= '<p>' . $wonder["yearmade"] . '</p>';
-        $str .= '<p>' . $wonder["yearvisit"] . '</p>';
+        $str .= '<div class="ihatethis">';
+        $str .= '<div class="imagecontainer">';
         $str .= '<img src="' . getImagePath($wonder["images"]) . '"/>';
-
-
+        $str .= '</div>';
+        $str .= '<p class="nameinfo">' . $wonder["name"] . '</p>';
+        $str .= '<p class="locationinfo">' . $wonder["location"] . '</p>';
+        $str .= '<p class="yearmadeinfo">' . $wonder["yearmade"] . '</p>';
+        $str .= '<p class="yearvisitinfo">' . $wonder["yearvisit"] . '</p>';
+        $str .= '</div>';
     }
+    $str .= '</div>';
     return $str;
 }
 
