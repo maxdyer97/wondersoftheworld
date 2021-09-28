@@ -4,19 +4,26 @@ h1 {
 }
 
 body {
+    font-family: 'Source Code Pro', monospace;
     padding: 2em;
 }
 img {
-    width: 25%;
-    height: 25%;
+    width: 100%;
+    height: auto;
+}
+/*.imagecontainer {*/
+/*    width: 30%;*/
+
+/*}*/
+.ihatethiscontainer {
+    width: 75vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem 1rem;
 }
 .ihatethis {
     display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    padding: 5em;
+    grid-template-columns: 1fr;
 }
 
 .nameinfo {
@@ -29,4 +36,109 @@ img {
 
 .yearmadeinfo {
     font-family: 'Source Code Pro', monospace;
+}
+
+.container1 {
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(148, 48, 48, 0.2),
+            rgba(167, 67, 67, 0.4)
+    ),
+    url(images/bp.jpg) center no repeat;
+    background-size: cover;
+}
+
+.navbar {
+    width: 20vw;
+    height: 100%;
+    background-color: #262626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20% 0 0 60%;
+}
+
+.hamburger-menu {
+    width: 35px;
+    height: 30px;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    background-color: chocolate;
+}
+
+.line-1 {
+    transform: rotateZ(-45deg);
+}
+
+.line-2 {
+    opacity: 0;
+}
+
+.line-3 {
+    transform: rotateZ(45deg);
+}
+
+.nav-list {
+    text-align: right;
+}
+
+.nav-item {
+    list-style: none;
+    margin: 25px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 22px;
+    color: #eee;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 3px;
+}
+
+.nav-link::before,
+.nav-link::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: chocolate;
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.nav-link::after {
+    bottom: 0;
+    transform-origin: right;
+
+}
+
+.nav-link::before {
+    top: 0;
+    transform-origin: left;
+
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+    transform: scaleX(1);
 }
