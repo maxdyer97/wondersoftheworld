@@ -20,7 +20,7 @@ function formatWonders(array $allWonders): string {
         $str .= '<p>' . $wonder["location"] . '</p>';
         $str .= '<p>' . $wonder["yearmade"] . '</p>';
         $str .= '<p>' . $wonder["yearvisit"] . '</p>';
-        $str .= '<p>' . $wonder["images"] . '</p>';
+        $str .= '<img src="' . getImagePath($wonder["images"]) . '"/>';
 
 
     }
