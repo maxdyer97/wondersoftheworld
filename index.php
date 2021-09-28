@@ -20,6 +20,10 @@ require_once 'includes/functions.php';
         <?php
         $wonders = getWonders($db);
         echo formatWonders($wonders);
+
+        $allWonders .= '<img src="';
+        $path = getImagePath($wonders['image']);
+        $allWonders .= ($path . '" alt="Picture of ' . $wonders['name'] . '">');
         ?>
 
     </section>
