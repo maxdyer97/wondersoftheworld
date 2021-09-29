@@ -4,7 +4,7 @@ require_once 'includes/functions.php';
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
@@ -15,7 +15,7 @@ require_once 'includes/functions.php';
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap" rel="stylesheet">
 
 <body class="container">
-    <div class="bodypic">
+    <div class="bodypic" id="wondershref">
         <div class="headertext">
         </div>
         <h1> Wonders of the World Collection </h1>
@@ -29,36 +29,41 @@ require_once 'includes/functions.php';
 
             <ul class="nav-list">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Wonders of World</a>
+                    <a href="#wondershref" class="nav-link">Wonders of World</a>
                 </li>
                 <li class="nav-item">
                     <a href="#factspagehref" class="nav-link">Facts</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Input form</a>
+                    <a href="#formhref" class="nav-link">Input form</a>
                 </li>
             </ul>
 
 
         </nav>
     </div>
-
         <section>
         <?php
         $wonders = getWonders($db);
         echo formatWonders($wonders);
         ?>
         </section>
-
-
-
-
     </div>
+
     <div>
-        <h1> Form Input </h1>
+        <h1 class="factspage id" id="factspagehref">Facts about the wonders of the world.</h1>
+        <p class="factsforwonders">Facts about the wonders of the world.</p>
     </div>
-    <h1 class="factspage id" id="factspagehref">Facts about the wonders of the world.</h1>
-    <p class="factsforwonders">Facts about the wonders of the world.</p>
+
+<section class="formcss">
+    <h1 class="formcss" id="formhref">Form Input</h1>
+    <form method="post" action="newWonders.php">
+        <input type="text" name="Name" value="" required><br><br/>
+        <input type="text" name="Location" value="" required><br><br/>
+        <input type="text" name="Year Made" value="" required><br><br/>
+        <input type="submit" value="Submit">
+    </form>
+</section>
 
 </body>
 </html>
