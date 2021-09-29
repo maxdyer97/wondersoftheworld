@@ -21,13 +21,7 @@ img {
     width: 100%;
     height: auto;
 }
-/*.facts {*/
-/*    background-image: url("../images/backgroundimage.jpg");*/
-/*    height: 50vh;*/
-/*}*/
 
-/*.imagecontainer {*/
-/*    width: 30%;*/
 
 /*}*/
 .ihatethiscontainer {
@@ -162,4 +156,8 @@ img {
 .nav-link:hover::before,
 .nav-link:hover::after {
     transform: scaleX(1);
+}
+
+.formcss {
+    align-items: center;
 }
