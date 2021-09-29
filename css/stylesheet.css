@@ -3,10 +3,12 @@ h1 {
     font-weight: bold;
     text-align: center;
 }
+html {
+    scroll-behavior: smooth;
+}
 .headertext {
     font-family: 'Source Code Pro', monospace;
     background-image: url("../images/backgroundimage.jpg");
-    background-repeat: no-repeat;
     height: 10em;
 }
 
