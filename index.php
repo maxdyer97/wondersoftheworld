@@ -15,7 +15,10 @@ require_once 'includes/functions.php';
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap" rel="stylesheet">
 
 <body class="container">
-     <h1> Wonders of the World Collection </h1>
+    <div class="bodypic">
+        <div class="headertext">
+        </div>
+        <h1> Wonders of the World Collection </h1>
     <div class="container1">
         <nav class="navbar">
             <div class="hamburger-menu">
@@ -32,7 +35,7 @@ require_once 'includes/functions.php';
                     <a href="#" class="nav-link">Facts</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">pls work</a>
+                    <a href="#" class="nav-link">Input form</a>
                 </li>
             </ul>
 
@@ -40,13 +43,22 @@ require_once 'includes/functions.php';
         </nav>
     </div>
 
-    <section>
+        <section>
         <?php
         $wonders = getWonders($db);
         echo formatWonders($wonders);
         ?>
-    </section>
+        </section>
 
+
+
+
+    </div>
+    <div>
+        <h1> Form Input </h1>
+    </div>
+    <h1>Facts about the wonders of the world.</h1>
+    <p class="factsforwonders">Facts about the wonders of the world.</p>
 
 </body>
 </html>

@@ -43,3 +43,7 @@ function getImagePath(string $imagePath): string {
     return $path;
 }
 
+//function addNewWonder(PDO $db, array $newWonder): bool {
+//    $query = $db->prepare('INSERT INTO `details`' . ' (`name`, `location`)' . ' VALUES (:wondername);');
+//}
+
