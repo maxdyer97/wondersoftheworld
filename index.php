@@ -32,7 +32,7 @@ require_once 'includes/functions.php';
                     <a href="#" class="nav-link">Wonders of World</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Facts</a>
+                    <a href="#factspagehref" class="nav-link">Facts</a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">Input form</a>
@@ -57,7 +57,7 @@ require_once 'includes/functions.php';
     <div>
         <h1> Form Input </h1>
     </div>
-    <h1>Facts about the wonders of the world.</h1>
+    <h1 class="factspage id" id="factspagehref">Facts about the wonders of the world.</h1>
     <p class="factsforwonders">Facts about the wonders of the world.</p>
 
 </body>
