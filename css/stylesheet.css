@@ -1,16 +1,29 @@
 h1 {
     font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
     text-align: center;
+}
+.headertext {
+    font-family: 'Source Code Pro', monospace;
+    background-image: url("../images/backgroundimage.jpg");
+    background-repeat: no-repeat;
+    height: 10em;
 }
 
 body {
     font-family: 'Source Code Pro', monospace;
-    padding: 2em;
+}
+.bodypic {
 }
 img {
     width: 100%;
     height: auto;
 }
+/*.facts {*/
+/*    background-image: url("../images/backgroundimage.jpg");*/
+/*    height: 50vh;*/
+/*}*/
+
 /*.imagecontainer {*/
 /*    width: 30%;*/
 
@@ -24,18 +37,35 @@ img {
 .ihatethis {
     display: grid;
     grid-template-columns: 1fr;
+    padding: 2em;
+    margin: 2em;
+    background: #ffb347;
+    background: -webkit-linear-gradient(to right, #ffcc33, #ffb347);
+    background: linear-gradient(to right, #ffcc33, #ffb347);
+    border-style: solid;
 }
 
 .nameinfo {
     font-family: 'Source Code Pro', monospace;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
 }
 
 .locationinfo {
     font-family: 'Source Code Pro', monospace;
+    text-align: center;
+    font-size: 20px;
 }
 
 .yearmadeinfo {
     font-family: 'Source Code Pro', monospace;
+    text-align: center;
+    font-size: 20px;
+}
+
+.factsforwonders {
+    text-align: center;
 }
 
 .container1 {
@@ -62,18 +92,6 @@ img {
     justify-content: center;
     align-items: center;
     border-radius: 20% 0 0 60%;
-}
-
-.hamburger-menu {
-    width: 35px;
-    height: 30px;
-    position: fixed;
-    top: 50px;
-    right: 50px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
 }
 
 .line {
@@ -119,8 +137,9 @@ img {
     content: "";
     width: 100%;
     height: 2px;
-    background-color: chocolate;
-    position: absolute;
+    background: #ffb347;
+    background: -webkit-linear-gradient(to right, #ffcc33, #ffb347);
+    background: linear-gradient(to right, #ffcc33, #ffb347);    position: absolute;
     left: 0;
     transform: scaleX(0);
     transition: transform 0.5s;
