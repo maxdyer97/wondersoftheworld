@@ -11,9 +11,6 @@ function getWonders($db): array {
 
 function formatWonders(array $allWonders): string {
     $str =  '<div class="ihatethiscontainer">';
-//    echo '<pre>';
-//    var_dump($allWonders);
-//    echo '</pre>';
 
     foreach ($allWonders as $wonder) {
         $str .= '<div class="ihatethis">';
@@ -43,7 +40,10 @@ function getImagePath(string $imagePath): string {
     return $path;
 }
 
-//function addNewWonder(PDO $db, array $newWonder): bool {
-//    $query = $db->prepare('INSERT INTO `details`' . ' (`name`, `location`)' . ' VALUES (:wondername);');
-//}
+function addNewWonder(PDO $db, array $newWonder): bool {
+    $query = $db->prepare('INSERT INTO `id`' . ' (`name`, `location`, `yearmade`)' .
+        ' VALUES (:name, :location, :yearmade);');
+    return $query->execute($newWonder);
+}
+
 
